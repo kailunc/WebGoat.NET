@@ -32,6 +32,7 @@
                 <th scope="col">Name</th>
                 <th scope="col">Quantity Per Unit</th>
                 <th scope="col">Price</th>
+				<th scope="col">SKU</th>	
             </tr>
             @foreach (var product in Model.Products)
             {
@@ -44,6 +45,7 @@
                     </td>
                     <td>@product.Product.QuantityPerUnit</td>
                     <td>@product.Product.DecimalUnitPrice</td>
+					<td>@product.Product.ProductId</td>
                 </tr>
             }
         </tbody>
