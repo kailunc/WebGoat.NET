@@ -29,6 +29,7 @@ namespace WebGoatCore.Models
         public virtual Category Category { get; set; }
         [Display(Name = "Supplier:")]
         public virtual Supplier Supplier { get; set; }
+		public string SKU => $"SKU-{ProductId:D6}";
 
         public decimal DecimalUnitPrice => Convert.ToDecimal(this.UnitPrice);
     }
