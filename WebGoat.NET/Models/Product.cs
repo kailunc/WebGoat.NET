@@ -31,6 +31,7 @@ namespace WebGoatCore.Models
         public virtual Supplier Supplier { get; set; }
 		public string SKU => $"SKU-{ProductId:D6}";
 
-        public decimal DecimalUnitPrice => Convert.ToDecimal(this.UnitPrice);
+        public decimal DecimalUnitPrice =>
+            decimal.Round(Convert.ToDecimal(UnitPrice), 2);
     }
 }
